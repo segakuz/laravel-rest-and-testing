@@ -1,0 +1,35 @@
+Accept: application/json
+Content-Type: application/json
+
+{
+"name": "Sega",
+"email": "sega@sega.se",
+"password": "12345678",
+"password_confirmation": "12345678",
+}
+
+
+
+
+Invoke-WebRequest http://laratestapi/api/register `
+-Method 'POST' `
+-Headers @{'Accept' = 'application/json'; 'Content-Type' = 'application/json; charset=utf-8'} `
+-Body @{"name"= "Sega"; "email"= "sega@sega.se"; "password"= "12345678"; "password_confirmation"= "12345678"}
+
+
+
+
+
+curl -X POST http://laratestapi/api/register \
+ -H "Accept: application/json" \
+ -H "Content-Type: application/json" \
+ -d '{"name": "Sega", "email": "sega.doe@toptal.com", "password": "12345678", "password_confirmation": "12345678"}'
+
+
+curl -X POST http://laratestapi/api/login \
+  -H "Accept: application/json" \
+  -H "Content-type: application/json" \
+  -d "{\"email\": \"admin@test.com\", \"password\": \"toptal\" }"
+
+
+curl -X GET http://laratestapi/api/user   -H "Accept: application/json"   -H "Content-type: application/json" -d"{\"api_token\": \"m6RFST55xwxFDgiO4Nitr5JMrV3i80g7GG4PEzYTn4VnGTujjpTljF4d9cra\"}"
