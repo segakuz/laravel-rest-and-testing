@@ -59,7 +59,7 @@
             "@php artisan key:generate --ansi"
         ],
         "test": [
-            "vendor/bin/phpunit"
+            "vendor\\bin\\phpunit"
         ]
     }
 }
